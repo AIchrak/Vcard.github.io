@@ -1,0 +1,126 @@
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing: border-box;
+}
+nav {
+    display: none;
+}
+.cell-1 {
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+img {
+    width: 250px;
+    height: auto;
+    border-radius: 15px 0 15px 0;
+    border: 2px solid white;
+    align-self: center;
+}
+.cell-2 {
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+}
+i {
+    border-radius: 50%;
+    background-color: white;
+    font-size: 20px;
+    padding: 10px;
+    color: black;
+    box-shadow: 2px 2px 4px black;
+}
+.cell-3 {
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+h2 {
+    text-align: center;
+}
+.resume{
+    align-self: center;
+    border: none;
+    box-shadow: 2px 2px 4px;
+    font-size: 15px;
+    text-transform: uppercase;
+    background-color: white;
+    margin-top: 10px;
+}
+.cell-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+}
+table{
+    border-collapse: collapse;
+    width: 250px;
+}
+@media only screen and (min-width: 600px) {
+    nav {
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-content: space-between;
+        font-size: 20px;
+    }
+    nav a {
+        text-decoration: none;
+        background-color: red;
+        color: white;
+        padding: 20px;
+        margin-right: 20px;
+        border-radius: 15px 0 15px 0;
+    }
+    nav a:hover {
+        background-color: grey;
+    }
+    nav a.active {
+        background-color: black;
+    }
+    .grid {
+        display: grid;
+        grid-auto-columns: minmax(auto, 400px);
+        grid-template-rows: 1fr 1fr;
+        justify-content: center;
+        width: max-content;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+        box-shadow: 2px 2px 4px;
+        border-radius: 15px;
+        
+    }
+    .cell-1 {
+        grid-row: 1/2;
+        grid-column: 1/2;
+        border-radius: 15px 0 0 0;
+    }
+    img {
+        position: relative;
+        top: 25px;
+    }
+    .cell-2 {
+        grid-row: 1/2;
+        grid-column: 2/3;
+        border-radius: 0 15px 0 0;
+    }
+    .cell-3 {
+        grid-row: 2/3;
+        grid-column: 1/2;
+        padding-left: 35px;
+        border-radius: 0 0 0 15px;
+    }
+    .cell-4 {
+        grid-row: 2/3;
+        grid-column: 2/3;
+        padding-left: 50px;
+        border-radius: 0 0 15px 0;
+    }
+}
